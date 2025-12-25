@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.zama-bg {
+  background-color: #ffd200;
+}
+
+/* Smooth page transitions */
+@layer utilities {
+  .page-transition {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  background-size: 200% auto;
+}
+
+/* Consistent color theme variables */
+:root {
+  --primary-gradient: linear-gradient(to right, rgb(56, 189, 248), rgb(99, 102, 241), rgb(168, 85, 247));
+  --card-bg: rgba(15, 23, 42, 0.6);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgba(226, 232, 240, 0.8);
+  --accent-sky: rgb(56, 189, 248);
+  --accent-indigo: rgb(99, 102, 241);
+  --accent-purple: rgb(168, 85, 247);
+}
